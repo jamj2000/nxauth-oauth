@@ -8,12 +8,68 @@
 html,
 body {
   max-width: 100vw;
+  min-height: 100vh;
   overflow-x: hidden;
 }
 
-a {
-  display: block;
-  /* color: inherit;
-  text-decoration: none; */
+
+header {
+  padding: 0 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+  background-color: gainsboro;
 }
 
+a {
+  /* color: inherit;*/
+  text-decoration: none; 
+  margin-right: 16px;
+  font-weight: 700;
+
+}
+
+a:hover {
+  color:blue;
+  text-shadow: 0 0 1px rgb(0, 0, 0)
+}
+
+
+section.auth {
+  height: 500px;
+  border: solid 1px black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+form {
+  background-color: antiquewhite;
+  padding: 40px;
+  border-radius: 10px;
+}
+
+button {
+  font-size: inherit;
+  background-color: whitesmoke;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 16px;
+  border-radius: 5px;
+  border: solid 1px lightgray;
+  margin: 1px;
+}
+
+button:hover {
+  background-color: white;
+  outline: solid 1px gray;
+}
+
+button:active {
+  outline: solid 2px black;
+}
