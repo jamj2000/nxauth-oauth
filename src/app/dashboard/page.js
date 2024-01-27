@@ -1,7 +1,6 @@
-import React from 'react'
 import { auth } from '@/auth'
-import Link from 'next/link';
 import { redirect } from 'next/navigation';
+import Link from 'next/link';
 
 async function page() {
     const session = await auth()
@@ -10,12 +9,13 @@ async function page() {
     if (!session) redirect('/')
 
     return (
-        <>
+        <main>
+            <h1>Dashboard</h1>
             <Link href="/">Página principal</Link>
             <div>
                 {JSON.stringify(session)}
             </div>
-        </>
+        </main>
     )
 }
 

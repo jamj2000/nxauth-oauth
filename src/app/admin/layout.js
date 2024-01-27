@@ -2,10 +2,10 @@ import React from 'react'
 
 function layout({children}) {
     return (
-        <section>
+        <main>
             <h1>Admin panel</h1>
             {children}
-        </section>
+        </main>
     )
 }
 

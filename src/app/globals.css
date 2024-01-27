@@ -1,3 +1,6 @@
+:root {
+  --header-height: 40px;
+}
 
 * {
   box-sizing: border-box;
@@ -18,8 +21,20 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 40px;
+  height: var(--header-height);
   background-color: gainsboro;
+}
+
+main {
+  padding-left: 50px;
+}
+
+h1 { 
+  font-size: 2.6rem;
+}
+
+h1, h2 {
+  margin-top: 50px;
 }
 
 a {
@@ -37,8 +52,9 @@ a:hover {
 
 
 section.auth {
-  height: 500px;
-  border: solid 1px black;
+  height: calc( 100vh - var(--header-height));
+  background-color: snow;
+  border: solid 1px darkgray;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -46,11 +62,11 @@ section.auth {
 }
 
 
-form {
+/* form {
   background-color: antiquewhite;
   padding: 40px;
   border-radius: 10px;
-}
+} */
 
 button {
   font-size: inherit;

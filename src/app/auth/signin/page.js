@@ -2,13 +2,15 @@
 // han sido obtenidos de https://authjs.dev/img/providers/google.svg y otros proveedores
 import { loginGoogle, loginGithub } from "@/lib/actions"
 
-function page() {
+function page({ searchParams }) {
+
+  const { error } = searchParams
 
   return (
-    <section className="auth">
+    <>
 
       <h1>Iniciar sesión</h1>
-
+      { error && <p>{error}</p>}
       <form>
 
         <button formAction={loginGoogle}>
@@ -21,7 +23,7 @@ function page() {
 
       </form>
 
-    </section>
+    </>
   )
 }
 

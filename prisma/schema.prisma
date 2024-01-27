@@ -6,10 +6,15 @@ generator client {
 }
 
 // prisma/schema.prisma
+// datasource db {
+//   provider  = "postgresql"
+//   url  	    = env("DATABASE_URL")
+//   directUrl = env("DIRECT_URL")
+// }
+
 datasource db {
-  provider  = "postgresql"
+  provider  = "mysql"
   url  	    = env("DATABASE_URL")
-  directUrl = env("DIRECT_URL")
 }
 
 // Modelos para Auth.js
@@ -34,16 +39,6 @@ model Account {
   @@unique([provider, providerAccountId])
 }
 
-model Session {
-  id           String   @id @default(cuid())
-  sessionToken String   @unique
-  userId       String
-  expires      DateTime
-  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
-}
-
-
-
 model User {
   id            String    @id @default(cuid())
   name          String?
@@ -53,21 +48,5 @@ model User {
   password      String?
   role          String?     @default("USER") // o "ADMIN"  
   accounts      Account[]
-  sessions      Session[]
 }
 
-model VerificationToken {
-  identifier String
-  token      String   @unique
-  expires    DateTime
-
-  @@unique([identifier, token])
-}
-
-model Articulos {
-  id          String  @id @default(cuid())
-  nombre      String
-  descripcion String?
-  precio      Float
-  imagen      String?
-}
