@@ -16,8 +16,8 @@ async function Header() {
             </div>
             <nav>
                 {session
-                    ? <Link href="/api/auth/signout">SignOut</Link>
-                    : <Link href="/api/auth/signin">SignIn</Link>
+                    ? <Link href="/auth/signout">SignOut</Link>
+                    : <Link href="/auth/signin">SignIn</Link>
                 }
             </nav>
         </header>
