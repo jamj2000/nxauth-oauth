@@ -53,7 +53,6 @@ a:hover {
 
 section.auth {
   height: calc( 100vh - var(--header-height));
-  background-color: snow;
   border: solid 1px darkgray;
   display: flex;
   flex-direction: column;
