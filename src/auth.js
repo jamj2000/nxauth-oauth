@@ -15,6 +15,7 @@ const options = {
     },
     callbacks: {
         async session({ session, token }) {
+            session.user.id = token?.sub;     // Para recuperar ID de usuario desde el token
             session.user.role = token?.role
             return session
         },
