@@ -4,6 +4,7 @@ const errors = new Map();
 errors.set('Configuration', "Hay un problema con la configuración del servidor. Comprueba si tus opciones son correctas.");
 errors.set('AccessDenied', "Acceso denegado.");
 errors.set('Verification', "El token ha caducado o ya ha sido utilizado. Relacionado con el proveedor de correo electrónico.");
+errors.set('AdapterError', "Error del Adaptador.");
 errors.set('Default', "Ocurrió un error inesperado.");
 
 

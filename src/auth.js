@@ -19,15 +19,18 @@ const options = {
             session.user.role = token?.role
             return session
         },
-        async jwt({ token }) {  
 
-            const { role } = await prisma.user.findUnique({
+        async jwt({ token }) {  
+            if (!token.sub) return token;
+            
+            const user = await prisma.user.findUnique({
                 where: {
-                    email: token.email
+                    id: token.sub
                 }
             })
-            token.role = role
+            if (!user) return token;
 
+            token.role = user?.role
             return token
         }
     }
