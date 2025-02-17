@@ -1,6 +1,7 @@
 import { logout } from "@/lib/actions"
 
-function page() {
+function PaginaLogout() {
+  
   return (
     <>
       <h1>Cerrar sesión</h1>
@@ -13,4 +14,4 @@ function page() {
   )
 }
 
-export default page
+export default PaginaLogout

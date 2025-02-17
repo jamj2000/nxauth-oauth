@@ -1,5 +1,5 @@
 
-export default function Layout({ children }) {
+export default function AuthLayout({ children }) {
   return (
     <section className="auth">
       {children}

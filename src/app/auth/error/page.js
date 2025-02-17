@@ -8,8 +8,9 @@ errors.set('AdapterError', "Error del Adaptador.");
 errors.set('Default', "Ocurrió un error inesperado.");
 
 
-function page({searchParams}) {
-  const { error } = searchParams;
+async function PaginaError({searchParams}) {
+
+  const { error } = await searchParams;
 
   return (
     <>
@@ -20,4 +21,4 @@ function page({searchParams}) {
   )
 }
 
-export default page
+export default PaginaError

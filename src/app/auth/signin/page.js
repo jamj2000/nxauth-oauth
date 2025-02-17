@@ -17,9 +17,9 @@ errors.set('SessionRequired', "Error al iniciar sesión. Verifique que los detal
 errors.set('Default', "No se puede iniciar sesión.");
 
 
-function page({ searchParams }) {
+async function PaginaLogin({ searchParams }) {
 
-  const { error } = searchParams
+  const { error } = await searchParams
 
   return (
     <>
@@ -42,4 +42,4 @@ function page({ searchParams }) {
   )
 }
 
-export default page
+export default PaginaLogin

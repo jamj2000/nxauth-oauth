@@ -9,9 +9,8 @@ async function Header() {
         <header>
             <div>
                 <Link href="/">Inicio</Link>
-                { session?.user?.role == 'ADMIN'
-                    && <Link href="/admin">Admin panel</Link>
-                }
+                {session?.user?.role == 'ADMIN'
+                    && <Link href="/admin">Admin panel</Link>}
                 <Link href="/dashboard">Dashboard</Link>
             </div>
             <nav>
