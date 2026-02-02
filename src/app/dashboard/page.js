@@ -11,10 +11,10 @@ async function page() {
     return (
         <main>
             <h1>Dashboard</h1>
-            <Link href="/">Página principal</Link>
-            <div>
-                {JSON.stringify(session)}
-            </div>
+            <Link href="/">Volver a Página principal</Link>
+            <pre>
+                {JSON.stringify(session, null, 2)}
+            </pre>
         </main>
     )
 }
