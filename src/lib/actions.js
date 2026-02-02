@@ -20,6 +20,16 @@ export async function loginGithub() {
     }
 }
 
+export async function loginDiscord() {
+    try {
+        await signIn('discord', { redirectTo: '/dashboard' })
+    } catch (error) {
+        console.log(error);
+        throw error
+    }
+}
+
+
 // https://authjs.dev/reference/nextjs#signout
 export async function logout() {
     try {

@@ -1,6 +1,6 @@
 // Los iconos disponibles en la carpeta /public
 // han sido obtenidos de https://authjs.dev/img/providers/google.svg y otros proveedores
-import { loginGoogle, loginGithub } from "@/lib/actions"
+import { loginGoogle, loginGithub, loginDiscord } from "@/lib/actions"
 
 
 // https://next-auth.js.org/configuration/pages#sign-in-page
@@ -25,15 +25,22 @@ async function PaginaLogin({ searchParams }) {
     <>
 
       <h1>Iniciar sesión</h1>
-      { error && <p>{errors.get(error)}</p>}
+      {error && <p>{errors.get(error)}</p>}
       <form>
 
         <button formAction={loginGoogle}>
-          <img src="/google.svg" alt="Google" />  Iniciar sesión con Google
+          <img src="/google.svg" alt="Google" width="64" />
+          Iniciar sesión con Google
         </button>
 
         <button formAction={loginGithub}>
-          <img src="/github.svg" alt="Github" /> Iniciar sesión con Github
+          <img src="/github.svg" alt="Github" width="64" />
+          Iniciar sesión con Github
+        </button>
+
+        <button formAction={loginDiscord}>
+          <img src="/discord.svg" alt="Discord" width="64" />
+          Iniciar sesión con Discord
         </button>
 
       </form>
